@@ -40,19 +40,19 @@
   </div>
 
   <div id="notification" class="notification">
-    Proszę wypełnić wszystkie pola formularza!
+    WYPELNIJ WSZYSTKIE POLA
   </div>
 
   <main>
     <div class="logo" style="margin-bottom: 30px;">QA-CODE</div>
 
-    <h1>ZALOGUJ SIĘ</h1>
-    <p class="subtitle">PODAJ SWOJE DANE ABY SIĘ ZALOGOWAĆ</p>
+    <h1>ZALOGUJ SIE</h1>
+    <p class="subtitle">PODAJ SWOJE DANE ABY SIE ZALOGOWAC</p>
 
     <form class="login-form" id="loginForm" novalidate>
       <input id="username" type="text" placeholder="Nazwa użytkownika" />
       <input id="password" type="password" placeholder="Hasło" />
-      <button type="submit">ZALOGUJ SIĘ</button>
+      <button type="submit">ZALOGUJ SIE</button>
     </form>
 
     <button class="create-account-button" type="button">UTWÓRZ KONTO</button>
@@ -76,7 +76,7 @@
       }
 
       // Tutaj możesz dodać sprawdzanie danych / zapytanie do backendu
-      notification.textContent = 'Logowanie zakończone sukcesem!';
+      notification.textContent = 'ZALOGOWANO DO PANELU';
       notification.classList.add('show');
       setTimeout(() => notification.classList.remove('show'), 3000);
 
