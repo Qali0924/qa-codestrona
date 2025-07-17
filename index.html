@@ -7,6 +7,24 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
+<div id="powiadomienie" style="display:none; position: fixed; top: 0; left: 0; right: 0; background-color: #00aaff; color: #fff; text-align: center; padding: 15px; font-family: 'Press Start 2P', cursive; z-index: 9999; font-size: 10px;">
+  ✅ ZŁOŻONO ZAMÓWIENIE!
+</div>
+
+<script>
+  // Pokaz powiadomienie jeśli status=success
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('status') === 'success') {
+    const powiadomienie = document.getElementById('powiadomienie');
+    powiadomienie.style.display = 'block';
+    setTimeout(() => {
+      powiadomienie.style.display = 'none';
+      // Usunięcie parametru z URL
+      history.replaceState(null, "", window.location.pathname);
+    }, 4000);
+  }
+</script>
+
 
 <body>
   <div class="background-decor">
@@ -31,7 +49,7 @@
       <div><strong>24/7</strong><span>DOSTEPNOSC</span></div>
     </div>
 
-    <button class="watch">ROZPOCZNIJ ZAMOWIENIE</button>
+<button class="watch" onclick="window.location.href='zamowienie.html'">ROZPOCZNIJ ZAMOWIENIE</button>
 
     <div class="features">
       <div>📽 NAJNOWSZE PLUGINY</div>
