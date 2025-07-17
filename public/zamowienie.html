@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Złóż Zamówienie - QA-CODE</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="background-decor">
+    <div class="square" style="top: 25%; left: 15%; animation-delay: 0s;"></div>
+    <div class="square" style="top: 55%; left: 75%; animation-delay: 2s;"></div>
+    <div class="circle" style="top: 35%; left: 65%; animation-delay: 1s;"></div>
+    <div class="circle" style="top: 75%; left: 25%; animation-delay: 3s;"></div>
+  </div>
+
+  <header>
+    <div class="logo">QA-CODE</div>
+    <button class="login" onclick="window.location.href='index.html'">STRONA GŁOWNA</button>
+  </header>
+
+  <main>
+    <h1>ZŁÓŻ <span>ZAMOWIENIE</span></h1>
+    <p class="subtitle">WYPELNIJ FORMULARZ, A SKONTAKTUJEMY SIE Z TOBA</p>
+
+    <form class="login-form" action="zapisz.php" method="post">
+      <input type="email" name="email" placeholder="TWÓJ E-MAIL" required />
+
+      <select name="typ" required style="font-family: 'Press Start 2P', cursive; background-color: #070718; color: #fff; border: 2px solid #00aaff; border-radius: 10px; padding: 12px 20px; width: 300px; font-size: 10px;">
+        <option value="">WYBIERZ TYP ZAMOWIENIA</option>
+        <option value="plugin">PLUGIN MINECRAFT</option>
+        <option value="strona">STRONA INTERNETOWA</option>
+        <option value="bot">BOT DISCORD</option>
+        <option value="inne">INNE</option>
+      </select>
+
+      <textarea name="opis" rows="6" placeholder="OPIS ZAMÓWIENIA" required style="padding: 12px 20px; width: 300px; font-size: 10px; font-family: 'Press Start 2P', cursive; border: 2px solid #00aaff; border-radius: 10px; background-color: #070718; color: #fff; resize: none;"></textarea>
+
+      <button type="submit">WYSLIJ ZAMOWIENIE</button>
+    </form>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const logo = document.querySelector('.logo');
+      logo.style.cursor = 'pointer';
+      logo.addEventListener('click', () => {
+        window.open('https://discord.gg/5gyFKBqHCa', '_blank');
+      });
+    });
+  </script>
+</body>
+</html>
