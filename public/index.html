@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QA-CODE</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('status') === 'success') {
+    alert('✅ Złożono zamówienie!');
+  }
+</script>
+
+<body>
+  <div class="background-decor">
+    <div class="square" style="top: 20%; left: 10%; animation-delay: 0s;"></div>
+    <div class="square" style="top: 60%; left: 80%; animation-delay: 2s;"></div>
+    <div class="circle" style="top: 30%; left: 70%; animation-delay: 1s;"></div>
+    <div class="circle" style="top: 70%; left: 20%; animation-delay: 3s;"></div>
+  </div>
+
+  <header>
+    <div class="logo">QA-CODE</div>
+    <button class="login">ZALOGUJ SIE</button>
+  </header>
+
+  <main>
+    <h1>WITAJ W <span>QA-CODE</span></h1>
+    <p class="subtitle">ODKRYJ NIEOGRANICZONY SWIAT PLUGINOW ORAZ PACZEK</p>
+
+    <div class="stats">
+      <div><strong>10</strong><span>MAMY PLUGINOW</span></div>
+      <div><strong>25</strong><span>LEGITCHEKOW</span></div>
+      <div><strong>24/7</strong><span>DOSTEPNOSC</span></div>
+    </div>
+
+<button class="watch" onclick="window.location.href='zamowienie.html'">ROZPOCZNIJ ZAMOWIENIE</button>
+
+    <div class="features">
+      <div>📽 NAJNOWSZE PLUGINY</div>
+      <div>⚡ BLYSKAWICZNIE REALIZOWANE ZAMOWIENIA</div>
+      <div>📱 INNOWACYJNE STRONY ORAZ BOTY</div>
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const logo = document.querySelector('.logo');
+      logo.style.cursor = 'pointer';
+      logo.addEventListener('click', () => {
+        window.open('https://discord.gg/5gyFKBqHCa', '_blank');
+      });
+
+      const loginButton = document.querySelector('.login');
+      loginButton.addEventListener('click', () => {
+        window.location.href = 'login.html';
+      });
+    });
+  </script>
+</body>
+</html>
